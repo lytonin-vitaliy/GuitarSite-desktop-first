@@ -1,5 +1,6 @@
-@import 'font';
-@import 'var';
+@import 'normalize.css';
+@import 'font.scss';
+@import 'var.scss';
 
 @function rem($px) {
   @return ($px / 16) + rem; // 16px = 1rem
@@ -13,7 +14,6 @@ body{
   overflow-x: hidden;
   box-sizing: border-box;
   line-height: 110%;
-
 }
 a{
   text-decoration: none;
@@ -30,11 +30,6 @@ a{
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
-  @media (max-width: $r_tab){
-    display: flex;
-    font-size: rem(26);
-  }
-  
 }
 
 .header{
@@ -46,12 +41,7 @@ a{
   position: fixed;
   top: 0;
   z-index: 999;
-  /* @media (min-width: $r_mob_min){
-    height: rem(61);
-  } */
-  @media (max-width: $r_tab){
-    height: rem(66);
-  }
+
   &::before{
     content: '';
     display: block;
@@ -62,28 +52,17 @@ a{
     left: 0;
     z-index: -1;
     background-color: $accent;
-    /* @media (min-width: $r_mob_min){
-    height: rem(61);
-  } */
-    @media (max-width: $r_desk){
-      top: rem(1);
-    }
-    @media (max-width: $r_tab){
-      top: rem(-2);
-    }
+
   }
   &__logo{
     background-color: $accent;
     padding: rem(17) rem(45) 0 rem(45);
     border-radius: rem(10) 0 0 0;
     position: relative;
-    /*  @media (min-width: $r_mob_min){
-    display: flex;
-    justify-content: space-between;
-  } */
     @media (max-width: $r_desk){
-    padding: rem(17) rem(20) 0 rem(20);
-  }
+      padding: rem(17) rem(20) 0 rem(20);
+    }
+
     &::after{
       content: '';
       display: block;
@@ -93,16 +72,8 @@ a{
       position: absolute;
       right: rem(-68);
       top: 0;
-      @media (max-width: $r_tab){
-      height: rem(66);
-      background-repeat: no-repeat;
-      background-size: contain;
-      right: rem(-66);
-     /*  @media (min-width: $r_mob_min){
-    display: none;
-  } */
-  }
     }
+
       &::before{
       content: '';
       display: block;
@@ -114,9 +85,7 @@ a{
       position: absolute;
       left: 0;
       bottom: rem(-24);}
-       /* @media (min-width: $r_mob_min){
-    display: none;
-  } */
+
       }
       &__info{
         padding: rem(17) rem(45) 0 rem(45);
@@ -124,10 +93,7 @@ a{
         position: relative;
         background-color: $accent;
         @media (max-width: $r_desk){
-        padding: rem(17) rem(20) 0 rem(20);
-        }
-        @media (max-width: $r_tab){
-        padding: rep(20) rep(20) 0 rep(20);
+          padding: rem(17) rem(20) 0 rem(20);
         }
         &::after{
       content: '';
@@ -138,15 +104,6 @@ a{
       position: absolute;
       top: 0;
       left: rem(-68);
-      @media (max-width: $r_tab){
-      height: rem(66);
-      background-repeat: no-repeat;
-      background-size: contain;
-      left: rem(-60);
-       @media (min-width: $r_mob_min){
-    display: none;
-  }
-  }
     }
       &::before{
       content: '';
@@ -159,9 +116,6 @@ a{
       position: absolute;
       right: 0;
       bottom: rem(-24);
-      /*  @media (min-width: $r_mob_min){
-    display: none;
-  } */
     }
       }
   &__link{
@@ -172,27 +126,17 @@ a{
     transition: $tr;
     @media (hover: hover){
       &:hover{
-        border-bottom: rem(1) solid $accent;
+        border-bottom: rem(1) solid transparent;
       }
     }
-    @media (max-width: $r_tab){
-      font-size: rem(1);
-    }
   }
-  
+
 }
 .logo{
   &._max{
     svg{
       width: rem(400);
       height: rem(30.63);
-      @media (max-width: $r_desk){
-        width: clamp(rem(300), 10vw, rem(400));
-      }
-      /* @media (min-width: $r_mob_min){
-        width: rem(150);
-        height: rem(11.49);
-  } */
     }
   }
   &._min{
@@ -203,12 +147,13 @@ a{
     }
   }
 }
+
 .container{
   width: 100%;
   max-width: rem(1830);
   margin: 0 auto;
-  padding-left: rem(15);
-  padding-right: rem(15);
+  padding-left: rem(45);
+  padding-right: rem(45);
   padding-top: rem(10);
   box-sizing: border-box;
   overflow-x: hidden;
@@ -216,11 +161,8 @@ a{
     padding-left: rem(20);
     padding-right: rem(20);
   }
-  @media (max-width: $r_tab){
-    padding-left: rem(15);
-    padding-right: rem(15);
-  }
 }
+
 .banner{
   display: flex;
   background-image: url(../images/bg-banner.jpg);
@@ -243,20 +185,12 @@ a{
     margin-top: 0;
     margin-bottom: rem(20);
     line-height:110%;
-    @media (max-width: $r_desk){
-      font-size: rem(50);
-    }
-    @media (max-width: $r_tab){
-      font-size: rem(40);
-    }
-
   }
+
   &__main{
       margin-left: rem(50);
-    @media (max-width: $r_desk){
-      margin-left: 0;
-      }
     }
+
     &__btn{
   display: block;
   width: 100%;
@@ -389,60 +323,11 @@ a{
       height: rem(50);
       border-radius: rem(10);
       transition: $tr;
-      @media (max-width: $r_tab){
-        top: rem(-80);
-        right: rem(235);
-      }
+
     }
-    }
-    @media (max-width: $r_desk){
-    flex-direction: column;
-    max-width: rem(984);
-    padding: rem(80) rem(40);
-    &__info{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: rem(20);
-      flex-wrap: wrap;
-    }
-    &__item{
-        flex-basis: calc(42% - rem(20));
-      }
-    &__btn{
-      margin-top: rem(50);
     }
   }
-  @media (max-width: $r_tab){
-    &__decor{
-      &::after, &::before{
-        display: none;
-      }
-    }
-    &__item{
-      flex-basis: calc(51% - rem(20));
-      border-right: rem(1) solid $light;
-      border-radius: rem(20);
-      width: 100%;
-      margin: 0;
-      justify-content: center;
-    }
-    &__text{
-      padding: 0;
-      font-size: rem(18);
-      padding: rem(24) rem(43) rem(24) rem(100);
-      span{
-        font-size: rem(20);
-        max-width: rem(164);
-        max-height: rem(22);
-        line-height: 110%;
-      }
-    }
-    .js-date{
-      font-size: rem(20);
-    }
-  }
-  }
+
 .banner-box{
   position: relative;
   border: rem(1) solid $light;
@@ -468,35 +353,18 @@ a{
   &._electroguitar{
   top: -25%;
   right: -3%;
-  @media (max-width: $r_desk){
-    width: rem(317);
-    height: rem(258);
-  }
-  @media (max-width: $r_tab){
-        width: rem(252);
-        height: rem(205);
-        top: -17%;
-        right: 0%;
-  }
   }
 }
-@media (max-width: $r_tab){
-    padding: rem(30) rem(200) rem(30) rem(30);
-    &__text{
-      margin-bottom: 0;
-  }
-  }
 }
+
 .tag-wrapper{
   display: flex;
   width: 100%;
   max-width: rem(1830);
   overflow-x: hidden;
   margin: rem(150) 0;
-   @media (max-width: $r_desk){
-    margin: rem(100) 0;
-  }
 }
+
 .tag{
   display: flex;
   gap: rem(64);
@@ -547,22 +415,8 @@ a{
     flex-basis: calc(100% - rem(395) - rem(70));
     width: calc(100% - rem(395) - rem(70));
   }
-  @media (max-width: $r_desk){
-    flex-direction: column;
-    width: 100%;
-    gap: rem(20);
-    justify-content: center;
-    &__title{
-      display: flex;
-      align-items: center;
-      flex-basis: 0;
-    }
-    &__content{
-    flex-basis: 0;
-    width: 100%;
-  }
-  }
 }
+
 .course-control{
   display: flex;
   align-items: center;
@@ -607,22 +461,6 @@ a{
     &::after{background-image: url(../images/ui/arrow-next.svg);
       position: inherit;
     }
-  }
-  @media (max-width: $r_desk){
-    &__control{
-      display: flex;
-    }
-  }
-  @media (max-width: $r_desk){
-   &__prev, &__next{
-    width: rem(50);
-    height: rem(50);
-    &:hover{
-      background-color: $accent;
-      border-color: $accent;
-    }
-   }
-   
   }
 }
 
@@ -685,59 +523,8 @@ a{
       z-index: -1;
     }
   }
-  @media (max-width: $r_desk){
-    &__item{
-    height: rem(500);
-    width: 100%;
-    max-width: rem(308);
-    overflow: visible;
-    }
-    &__img{
-      width: 100%;
-      height: rem(448);
-      max-width: rem(308);
-      object-fit: cover;
-      border-radius: rem(50);
-    }
-    &__name{
-      opacity: 1;
-      width: 100%;
-      font-size: rem(16);
-      bottom: 5%;
-      width: fit-content;
-      &::before{
-      content: '';
-        width: rem(416);
-        height: rem(66);
-        left: rem(-16);
-        bottom: rem(-25);
-        overflow: hidden;
-        z-index: -1;
-        border-radius: rem(60);
-      }
-      /* &::before{
-        display: none;} */
-    }
-  }
-  @media (max-width: $r_tab){
-    &__item{
-      margin-bottom: rem(50);
-      gap: rem(15);
-    }
-    &__name{
-      opacity: 1;
-      font-size: rem(12);
-      bottom: -10%;
-      width: fit-content;
-      &::before{
-        display: none;
-    }
-  }
-      &__img{
-        border-radius: rem(50);
-      }
-  }
 }
+
 .accordion{
   &__btn{
     display: flex;
@@ -794,12 +581,8 @@ a{
       content: '—';
     }
   }
-  @media (max-width: $r_tab){
-    &__item{
-      font-size: rem(18);
-    }
-  }
 }
+
 .steps{
   border: rem(1) solid $light;
   border-radius: rem(50);
@@ -832,15 +615,8 @@ a{
       }
       
     }
-    @media (max-width: $r_desk){
-      max-width: rem(1024);
-      padding-top: rem(100);
-      padding-bottom: rem(100);
-      &__list{
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
 }
+
 .result{
   margin-top: rem(150);
   margin-bottom: rem(250);
@@ -910,35 +686,8 @@ a{
       }
     }
 }
-@media (max-width: $r_desk){
-  margin-top: rem(100);
-  margin-bottom: rem(180);
- &__text{
-  font-size: rem(14);
-  font-weight: 400;
-  letter-spacing: 0;
- }
 }
-@media (max-width: $r_tab){
-  &__list{
-    grid-template-columns: repeat(2, 1fr);
-  }
-  &__item{
-    position: relative;
-    &._subgrid{
-    grid-column: inherit;
-    grid-template-columns: none;
-  }
-  }
-  
-  &__btn{
-    position: absolute;
-    right: 0;
-    top: 110%;
-    width: rem(738);
-  }
-}
-}
+
 .areas{
   &__link{
     display: flex;
@@ -1027,12 +776,6 @@ a{
       }
     }
   }
-  @media (max-width: $r_tab){
-    &__link{
-      font-size: rem(20);
-    }
-    
-  }
 }
 .footer{
   display: grid;
@@ -1040,6 +783,9 @@ a{
   justify-content: space-between;
   align-items: center;
   margin-bottom: rem(30);
+  background-color: $dark;
+  padding: rem(30) rem(50);
+  border-radius: rem(20);
   &__logo{
     margin-bottom: rem(30);
   }
@@ -1048,7 +794,7 @@ a{
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: rem(5);
+  gap: rem(11);
 }
 .social{
   &__link{
@@ -1106,6 +852,7 @@ a{
     }
   }
 }
+
 .footer-info{
   display: flex;
   flex-direction: column;
@@ -1118,6 +865,7 @@ a{
     font-size: rem(16);
     font-weight: 700;
     line-height: 150%;
+    transition: $tr;
     box-shadow: 0 rem(4) 0 rem(-3) $accent;
     @media (hover: hover){
       &:hover{
@@ -1129,10 +877,12 @@ a{
 
 .footer-copy{
   display: flex;
-  align-items: end;
+  align-self: end;
   justify-content: end;
   &__text{
     font-size: rem(16);
     margin-top: rem(20);
+    margin-bottom: 0;
   }
 }
+
