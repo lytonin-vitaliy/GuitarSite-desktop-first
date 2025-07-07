@@ -226,6 +226,9 @@ a{
 
   &__main{
       margin-left: rem(50);
+    @media (max-width: $r_desk_full){
+      margin-left: 0;
+    }
     }
 
     &__btn{
