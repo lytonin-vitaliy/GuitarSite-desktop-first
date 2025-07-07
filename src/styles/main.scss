@@ -41,6 +41,9 @@ a{
   position: fixed;
   top: 0;
   z-index: 999;
+  @media (max-width: $r_tab){
+    height: rem(66);
+  }
 
   &::before{
     content: '';
@@ -52,7 +55,9 @@ a{
     left: 0;
     z-index: -1;
     background-color: $accent;
-
+    @media (max-width: $r_tab){
+      top: rem(-2);
+    }
   }
   &__logo{
     background-color: $accent;
@@ -72,6 +77,11 @@ a{
       position: absolute;
       right: rem(-68);
       top: 0;
+      @media (max-width: $r_tab){
+        height: rem(66);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
     }
 
       &::before{
@@ -95,6 +105,9 @@ a{
         @media (max-width: $r_desk){
           padding: rem(17) rem(20) 0 rem(20);
         }
+        @media (max-width: $r_tab){
+          padding: rem(20) rem(20) 0 rem(20);
+        }
         &::after{
       content: '';
       display: block;
@@ -104,6 +117,12 @@ a{
       position: absolute;
       top: 0;
       left: rem(-68);
+          @media (max-width: $r_tab){
+            height: rem(66);
+            background-size: contain;
+            background-repeat: no-repeat;
+            left: rem(-62);
+          }
     }
       &::before{
       content: '';
@@ -129,6 +148,9 @@ a{
         border-bottom: rem(1) solid transparent;
       }
     }
+    @media (max-width: $r_tab){
+      font-size: rem(16);
+    }
   }
 
 }
@@ -137,13 +159,9 @@ a{
     svg{
       width: rem(400);
       height: rem(30.63);
-    }
-  }
-  &._min{
-    svg{
-      width: rem(296);
-      height: rem(22);
-       
+      @media (max-width: $r_desk){
+        width: clamp(rem(300), 39vw, rem(400));
+      }
     }
   }
 }
@@ -172,11 +190,24 @@ a{
   padding: rem(100) rem(45);
   margin-top: rem(135);
   gap: rem(50);
+  @media (max-width: $r_desk_full){
+    flex-direction: column;
+    padding: rem(80) rem(40);
+  }
+  @media (max-width: $r_desk){
+    padding: clamp(rem(50), calc(rem(-40) + 1.17vw), rem(80)) clamp(rem(30), calc(rem(0) + 0.39vw), rem(40));
+
+  }
   &__main{
     flex-basis: 61%;
   }
   &__info{
     flex-basis:calc(39% - rem(50));
+    @media (max-width: $r_desk_full){
+      display: grid;
+      gap: rem(20);
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &__title{
     font-size: rem(64);
@@ -185,6 +216,12 @@ a{
     margin-top: 0;
     margin-bottom: rem(20);
     line-height:110%;
+    @media (max-width: $r_desk_full){
+      font-size: clamp(rem(50), 4vw + 1rem, rem(64));
+    }
+    @media (max-width: $r_desk){
+      font-size: clamp(2.5rem, 0.431rem + 4.3103vw, 3.125rem);
+    }
   }
 
   &__main{
@@ -211,6 +248,9 @@ a{
         background-color: transparent;
       }
     }
+      @media (max-width: $r_desk_full){
+        margin-top: rem(50);
+      }
   }
   &__item{
     display: flex;
@@ -263,10 +303,19 @@ a{
       }
       }
     }
+    @media (max-width: $r_desk - 24px){
+      border-right: rem(1) solid $light;
+      border-radius: rem(20);
+      margin-right: 0;
+      justify-content: center;
+      &:hover{
+        display: none;
+      }
+    }
   }
   &__text{
       font-weight: 200;
-      font-size: rem(24);
+      font-size: clamp(2rem, 5.7241rem + -7.7586vw, 0.875rem);
       padding: rem(30);
       margin: 0;
       line-height: 110%;
@@ -277,6 +326,13 @@ a{
         margin-top: rem(20);
         line-height: 110%;
       }
+    @media (max-width: $r_desk - 24px){
+      padding: rem(20) rem(20) rem(20) rem(100);
+      font-size: clamp(1.125rem, -0.1164rem + 2.5862vw, 1.5rem);
+      span{
+        font-size: clamp(1.25rem, -1.2328rem + 5.1724vw, 2rem);
+      }
+    }
     }
   &__decor{
     display: flex;
@@ -294,6 +350,9 @@ a{
       right: rem(-79);
       width: rem(80);
       height: rem(151);
+      @media (max-width: $r_desk - 24px){
+        display: none;
+      }
     }
 
     &::after{
@@ -323,6 +382,10 @@ a{
       height: rem(50);
       border-radius: rem(10);
       transition: $tr;
+      @media (max-width: $r_desk - 24px){
+        top: calc(rem(-75) - 1vw);
+        left: rem(32);
+      }
 
     }
     }
@@ -332,7 +395,10 @@ a{
   position: relative;
   border: rem(1) solid $light;
   border-radius: rem(20);
-  padding: rem(30) rem(332) rem(30) rem(30);
+  padding: rem(30) rem(300) rem(30) rem(30);
+  @media (max-width: $r_desk_full_over){
+    padding-right: clamp(rem(200), 17vw, rem(332));
+  }
   &__title{
     font-size: rem(24);
     font-weight: 400;
@@ -353,6 +419,18 @@ a{
   &._electroguitar{
   top: -25%;
   right: -3%;
+
+    @media (max-width: $r_desk_full_over){
+      top: inherit;
+      bottom: rem(156);
+      width: clamp(rem(252), 17vw, rem(332));
+    }
+    @media (max-width: $r_desk_full){
+      /*width: auto;*/
+      top: rem(-56);
+      bottom: inherit;
+      width: clamp(rem(252), 17vw, rem(332));
+    }
   }
 }
 }
@@ -362,7 +440,7 @@ a{
   width: 100%;
   max-width: rem(1830);
   overflow-x: hidden;
-  margin: rem(150) 0;
+  margin: clamp(rem(80), 9.77vw, rem(150)) 0;
 }
 
 .tag{

@@ -40,10 +40,10 @@ function updateBannerText() {
   const date = document.querySelector('.js-date');
   if (!date) return;
 
-  if (window.innerWidth <= 1024) {
+  if (window.innerWidth <= 1287) {
     date.textContent = '01.04 - 28.06'; // короткий для мобилки
   } else {
-    date.textContent = '01 апреля - 28 июня'; // полный для десктопа
+    date.textContent = '01 апреля - 28\u00A0июня'; // полный для десктопа
   }
 }
 
@@ -51,18 +51,3 @@ window.addEventListener('load', updateBannerText);
 window.addEventListener('resize', updateBannerText);
 
 
-const button = document.querySelector('#color-changer');
-button.addEventListener('click', () => {
-  const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
-  document.body.style.background = randomColor;
-});
-
-/* const button = document.querySelector('#color-changer');
-let isPurple = false;
-
-button.addEventListener('click', () => {
-  isPurple = !isPurple;
-  document.body.style.background = isPurple ? 'purple' : '#1F2023'; // Исходный цвет
-});
-
-console.log (isPurple); */
