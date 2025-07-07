@@ -27,9 +27,13 @@ a{
   font-weight: 700;
   font-size: rem(32);
   letter-spacing: 0.05em;
+  line-height: 110%;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
+  @media (width <= $r_desk){
+    font-size: clamp(rem(32), 2.343vw, rem(26));
+  }
 }
 
 .header{
@@ -41,7 +45,7 @@ a{
   position: fixed;
   top: 0;
   z-index: 999;
-  @media (max-width: $r_tab){
+  @media (width <= $r_tab){
     height: rem(66);
   }
 
@@ -55,7 +59,7 @@ a{
     left: 0;
     z-index: -1;
     background-color: $accent;
-    @media (max-width: $r_tab){
+    @media (width <= $r_tab){
       top: rem(-2);
     }
   }
@@ -64,7 +68,7 @@ a{
     padding: rem(17) rem(45) 0 rem(45);
     border-radius: rem(10) 0 0 0;
     position: relative;
-    @media (max-width: $r_desk){
+    @media (width <= $r_desk){
       padding: rem(17) rem(20) 0 rem(20);
     }
 
@@ -77,7 +81,7 @@ a{
       position: absolute;
       right: rem(-68);
       top: 0;
-      @media (max-width: $r_tab){
+      @media (width <= $r_tab){
         height: rem(66);
         background-size: contain;
         background-repeat: no-repeat;
@@ -102,10 +106,10 @@ a{
         border-radius: 0 rem(10) 0 0;
         position: relative;
         background-color: $accent;
-        @media (max-width: $r_desk){
+        @media (width <= $r_desk){
           padding: rem(17) rem(20) 0 rem(20);
         }
-        @media (max-width: $r_tab){
+        @media (width <= $r_tab){
           padding: rem(20) rem(20) 0 rem(20);
         }
         &::after{
@@ -117,7 +121,7 @@ a{
       position: absolute;
       top: 0;
       left: rem(-68);
-          @media (max-width: $r_tab){
+          @media (width <= $r_tab){
             height: rem(66);
             background-size: contain;
             background-repeat: no-repeat;
@@ -148,7 +152,7 @@ a{
         border-bottom: rem(1) solid transparent;
       }
     }
-    @media (max-width: $r_tab){
+    @media (width <= $r_tab){
       font-size: rem(16);
     }
   }
@@ -159,9 +163,15 @@ a{
     svg{
       width: rem(400);
       height: rem(30.63);
-      @media (max-width: $r_desk){
+      @media (width <= $r_desk){
         width: clamp(rem(300), 39vw, rem(400));
       }
+    }
+  }
+  &._min{
+    svg{
+      width: rem(296);
+      height: rem(22);
     }
   }
 }
@@ -175,7 +185,7 @@ a{
   padding-top: rem(10);
   box-sizing: border-box;
   overflow-x: hidden;
-  @media (max-width: $r_desk){
+  @media (width <= $r_desk){
     padding-left: rem(20);
     padding-right: rem(20);
   }
@@ -190,11 +200,11 @@ a{
   padding: rem(100) rem(45);
   margin-top: rem(135);
   gap: rem(50);
-  @media (max-width: $r_desk_full){
+  @media (width <= $r_desk_full){
     flex-direction: column;
     padding: rem(80) rem(40);
   }
-  @media (max-width: $r_desk){
+  @media (width <= $r_desk){
     padding: clamp(rem(50), calc(rem(-40) + 1.17vw), rem(80)) clamp(rem(30), calc(rem(0) + 0.39vw), rem(40));
 
   }
@@ -203,7 +213,7 @@ a{
   }
   &__info{
     flex-basis:calc(39% - rem(50));
-    @media (max-width: $r_desk_full){
+    @media (width <= $r_desk_full){
       display: grid;
       gap: rem(20);
       grid-template-columns: repeat(2, 1fr);
@@ -216,17 +226,17 @@ a{
     margin-top: 0;
     margin-bottom: rem(20);
     line-height:110%;
-    @media (max-width: $r_desk_full){
+    @media (width <= $r_desk_full){
       font-size: clamp(rem(50), 4vw + 1rem, rem(64));
     }
-    @media (max-width: $r_desk){
+    @media (width <= $r_desk){
       font-size: clamp(2.5rem, 0.431rem + 4.3103vw, 3.125rem);
     }
   }
 
   &__main{
       margin-left: rem(50);
-    @media (max-width: $r_desk_full){
+    @media (width <= $r_desk_full){
       margin-left: 0;
     }
     }
@@ -251,7 +261,7 @@ a{
         background-color: transparent;
       }
     }
-      @media (max-width: $r_desk_full){
+      @media (width <= $r_desk_full){
         margin-top: rem(50);
       }
   }
@@ -306,14 +316,17 @@ a{
       }
       }
     }
-    @media (max-width: $r_desk - 24px){
+    @media (width <= $r_desk - 24px){
       border-right: rem(1) solid $light;
       border-radius: rem(20);
       margin-right: 0;
       justify-content: center;
       &:hover{
-        display: none;
+        &::before{
+          display: none;
+        }
       }
+
     }
   }
   &__text{
@@ -329,7 +342,7 @@ a{
         margin-top: rem(20);
         line-height: 110%;
       }
-    @media (max-width: $r_desk - 24px){
+    @media (width <= $r_desk - 24px){
       padding: rem(20) rem(20) rem(20) rem(100);
       font-size: clamp(1.125rem, -0.1164rem + 2.5862vw, 1.5rem);
       span{
@@ -353,7 +366,7 @@ a{
       right: rem(-79);
       width: rem(80);
       height: rem(151);
-      @media (max-width: $r_desk - 24px){
+      @media (width <= $r_desk - 24px){
         display: none;
       }
     }
@@ -373,6 +386,9 @@ a{
       height: rem(151);
       opacity: 0;
       transition: $tr;
+      @media (width <= $r_desk - 24px){
+        display: none;
+      }
     }
     &._calendar, &._offline, &._age, &._payment{
       background-size: contain;
@@ -385,7 +401,7 @@ a{
       height: rem(50);
       border-radius: rem(10);
       transition: $tr;
-      @media (max-width: $r_desk - 24px){
+      @media (width <= $r_desk - 24px){
         top: calc(rem(-75) - 1vw);
         left: rem(32);
       }
@@ -399,7 +415,7 @@ a{
   border: rem(1) solid $light;
   border-radius: rem(20);
   padding: rem(30) rem(300) rem(30) rem(30);
-  @media (max-width: $r_desk_full_over){
+  @media (width <= $r_desk_full_over){
     padding-right: clamp(rem(200), 17vw, rem(332));
   }
   &__title{
@@ -423,12 +439,12 @@ a{
   top: -25%;
   right: -3%;
 
-    @media (max-width: $r_desk_full_over){
+    @media (width <= $r_desk_full_over){
       top: inherit;
       bottom: rem(156);
       width: clamp(rem(252), 17vw, rem(332));
     }
-    @media (max-width: $r_desk_full){
+    @media (width <= $r_desk_full){
       /*width: auto;*/
       top: rem(-56);
       bottom: inherit;
@@ -488,13 +504,26 @@ a{
   display: flex;
   gap: rem(70);
   width: 100%;
+  @media (width <= $r_desk_full){
+    flex-direction: column;
+    gap: rem(30);
+  }
   &__title{
     display: block;
     flex-basis: rem(395);
+    @media (width <= $r_desk_full){
+      flex-basis: auto;
+      display: flex;
+      justify-content: space-between;
+    }
   }
   &__content{
     flex-basis: calc(100% - rem(395) - rem(70));
     width: calc(100% - rem(395) - rem(70));
+    @media (width <= $r_desk_full){
+      flex-basis: auto;
+      width: 100%;
+    }
   }
 }
 
@@ -532,6 +561,9 @@ a{
       border-color: $accent;
     }
   }
+    @media (width <= $r_desk_full){
+      margin-top: 0;
+    }
   }
   &__prev{
     &::after{background-image: url(../images/ui/arrow-prev.svg);
@@ -547,7 +579,7 @@ a{
 
 .slider-teacher{
   &__item{
-    height: rem(707);
+    height: min(rem(707), 47vw);
     background-color: $dark;
     border: rem(1) solid $dark;
     position: relative;
@@ -563,6 +595,9 @@ a{
       }
     }
    }
+    @media (width <= $r_desk_full){
+      height: min(rem(672), 47vw);
+    }
   }
   &__grid{
     position: absolute;
@@ -574,10 +609,13 @@ a{
   }
   &__img{
     width: 100%;
-    height: rem(637);
+    height: min(rem(637), 47vw);;
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    @media (width <= $r_desk_full){
+      height: min(rem(615), 43vw);
+    }
   }
   &__name{
     position: absolute;
@@ -587,21 +625,29 @@ a{
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 400;
-    font-size: rem(24);
+    font-size: clamp (rem(16), 0.892vw, rem(24));
     opacity: 0;
     transition: $tr;
     z-index: 1;
+    @media (width <= $r_desk_full){
+      text-align: center;
+      left: 0;
+    }
     &::before{
       content: '';
       display: block;
       width: 100%;
-      height: rem(637);
+      height: min(rem(637), 47vw);;
       background: linear-gradient(42deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.00) 59.08%);
       background-repeat: no-repeat;
       position: absolute;
       left: rem(-30);
       bottom: rem(-30);
       z-index: -1;
+      @media (width <= $r_desk_full){
+        height: min(rem(615), 43vw);
+        left: 0;
+      }
     }
   }
 }
@@ -673,11 +719,19 @@ a{
   padding-bottom: rem(150);
   margin-top: rem(150);
   background: linear-gradient(180deg, #1f2023 0%, #7027E2 50%, #1f2023 100%);
+  @media (width <= $r_desk_full){
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+  }
   &__list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: rem(30);
     margin-top: rem(50);
+    @media (width <= $r_desk_full){
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(rem(20), 3.906vw, rem(30));
+    }
   }
     &__item{
       border: rem(1) solid $light;
