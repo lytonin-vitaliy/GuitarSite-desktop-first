@@ -32,7 +32,7 @@ a{
   margin-top: 0;
   margin-bottom: 0;
   @media (width <= $r_desk){
-    font-size: clamp(rem(32), 2.343vw, rem(26));
+    font-size: clamp(rem(26), 2.343vw, rem(32));
   }
 }
 
@@ -230,7 +230,7 @@ a{
       font-size: clamp(rem(50), 4vw + 1rem, rem(64));
     }
     @media (width <= $r_desk){
-      font-size: clamp(2.5rem, 0.431rem + 4.3103vw, 3.125rem);
+      font-size: clamp(rem(40), 3.906vw + 0.625rem, rem(50));
     }
   }
 
@@ -331,7 +331,7 @@ a{
   }
   &__text{
       font-weight: 200;
-      font-size: clamp(2rem, 5.7241rem + -7.7586vw, 0.875rem);
+      font-size: rem(24);
       padding: rem(30);
       margin: 0;
       line-height: 110%;
@@ -344,9 +344,9 @@ a{
       }
     @media (width <= $r_desk - 24px){
       padding: rem(20) rem(20) rem(20) rem(100);
-      font-size: clamp(1.125rem, -0.1164rem + 2.5862vw, 1.5rem);
+      font-size: clamp(rem(18), 2.343vw, rem(24));
       span{
-        font-size: clamp(1.25rem, -1.2328rem + 5.1724vw, 2rem);
+        font-size: clamp(rem(20), 4.687vw, rem(32));
       }
     }
     }
@@ -534,7 +534,6 @@ a{
   &__prev, &__next{
     width: rem(70);
     height: rem(70);
-    display: block;
     border: rem(1) solid $light;
     border-radius: 100%;
     position: inherit;
@@ -587,6 +586,7 @@ a{
     overflow: hidden;
     box-sizing: border-box;
     transition: $tr;
+    z-index: 2;
    @media (hover: hover){
     &:hover{
       border: rem(1) solid $accent;
@@ -597,6 +597,9 @@ a{
    }
     @media (width <= $r_desk_full){
       height: min(rem(672), 47vw);
+    }
+    @media (width <= $r_tab) {
+      border: rem(1) solid $accent;
     }
   }
   &__grid{
@@ -633,13 +636,32 @@ a{
       text-align: center;
       left: 0;
     }
+    &._desktop{
+      @media (width <= $r_tab){
+        display: none;
+      }
+    }
+    &._mobile{
+      display: none;
+      font-size: rem(12);
+      position: inherit;
+      bottom: inherit;
+      left: inherit;
+      opacity: 1;
+      margin-top: rem(8);
+      &::before{
+        display: none;
+      }
+      @media (width <= $r_tab){
+        display: block;
+      }
+    }
     &::before{
       content: '';
       display: block;
       width: 100%;
       height: min(rem(637), 47vw);;
-      background: linear-gradient(42deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.00) 59.08%);
-      background-repeat: no-repeat;
+      background: linear-gradient(42deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.00) 59.08%) no-repeat;
       position: absolute;
       left: rem(-30);
       bottom: rem(-30);
@@ -664,7 +686,7 @@ a{
     border-radius: rem(20);
     padding: rem(20) rem(25) rem(20) rem(30);
     color: $accent;
-    font-size: rem(32);
+    font-size: clamp(rem(20), 4.687vw + 0.5rem, rem(32));
     cursor: pointer;
     &:focus {
       outline: rem(2) solid $accent;
@@ -714,10 +736,9 @@ a{
   border: rem(1) solid $light;
   border-radius: rem(50);
   max-width: rem(1920);
-  margin: 0 auto;
   padding-top: rem(150);
   padding-bottom: rem(150);
-  margin-top: rem(150);
+  margin: rem(150) auto 0;
   background: linear-gradient(180deg, #1f2023 0%, #7027E2 50%, #1f2023 100%);
   @media (width <= $r_desk_full){
     padding-top: rem(100);
@@ -880,10 +901,11 @@ a{
     }
     &._acoustic{
       &::before{
-        width: rem(568);
-        height: rem(314);
-        background-image: url(../images/areas/acoustic.png);
-        top: calc(50% - rem(180));
+        width: clamp(rem(200), 37vw, rem(527)); // перепроверить параметры, клэмп неверно рассчитан
+        height: rem(346);
+        background: url(../images/areas/acoustic.png), center;
+        top: calc(50% - rem(200));
+        left: 50vw;
       }
     }
     &._drums{
@@ -892,6 +914,7 @@ a{
         height: rem(474);
         background-image: url(../images/areas/drums.png);
         top: calc(50% - rem(237));
+        left: 50vw;
       }
     }
     &._violin{
@@ -900,6 +923,7 @@ a{
         height: rem(528);
         background-image: url(../images/areas/violin.png);
         top: calc(50% - rem(264));
+        left: 50vw;
       }
     }
     &._bas{
@@ -908,6 +932,7 @@ a{
         height: rem(394);
         background-image: url(../images/areas/bas.png);
         top: calc(50% - rem(197));
+        left: 50vw;
       }
     }
   }
