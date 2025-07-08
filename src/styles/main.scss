@@ -901,38 +901,50 @@ a{
     }
     &._acoustic{
       &::before{
-        width: clamp(rem(200), 37vw, rem(527)); // перепроверить параметры, клэмп неверно рассчитан
-        height: rem(346);
-        background: url(../images/areas/acoustic.png), center;
-        top: calc(50% - rem(200));
-        left: 50vw;
+        width: clamp(rem(200), 30vw, rem(514));
+        height: clamp(rem(200), 30vw, rem(274));
+        background: url(../images/areas/acoustic.png);
+        top: calc(50% - rem(157));
+        left: 61vw;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
       }
     }
     &._drums{
       &::before{
-        width: rem(474);
-        height: rem(474);
+        width: clamp(rem(200), 30vw, rem(366));
+        height: clamp(rem(200), 30vw, rem(421));
         background-image: url(../images/areas/drums.png);
-        top: calc(50% - rem(237));
-        left: 50vw;
+        top: calc(50% - rem(173));
+        left: 55vw;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
       }
     }
     &._violin{
       &::before{
-        width: rem(568);
-        height: rem(528);
+        width: clamp(rem(200), 30vw, rem(535));
+        height: clamp(rem(200), 30vw, rem(399));
         background-image: url(../images/areas/violin.png);
-        top: calc(50% - rem(264));
-        left: 50vw;
+        top: calc(50% - rem(216));
+        left: 55vw;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
       }
     }
     &._bas{
       &::before{
-        width: rem(586);
-        height: rem(394);
+        width: clamp(rem(200), 30vw, rem(528));
+        height: clamp(rem(200), 30vw, rem(379));
         background-image: url(../images/areas/bas.png);
         top: calc(50% - rem(197));
-        left: 50vw;
+        left: 60vw;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
       }
     }
   }
