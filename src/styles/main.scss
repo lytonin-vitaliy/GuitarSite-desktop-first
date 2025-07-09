@@ -774,17 +774,33 @@ a{
 .result{
   margin-top: rem(150);
   margin-bottom: rem(250);
+  container-type: inline-size;
+  container-name: result;
+  @container result (max-width: 935px){
+    .result__list{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .result__item._subgrid{
+      grid-column: 2 / 3;
+    }
+  }
   &__list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: rem(30);
     margin-top: rem(50);
+    @media (width <= $r_desk){
+      gap: clamp(rem(20), 2.8vw, rem(30));
+    }
   }
   &__item{
     background-color: $light;
     border-radius: rem(20);
     padding: rem(30);
     transition: $tr;
+    @media (width <= $r_desk){
+      padding: clamp(rem(20), 2.8vw, rem(30));
+    }
     @media (hover: hover){
       &:hover {
     transform: translateY(rem(-5));
@@ -797,6 +813,9 @@ a{
       grid-template-columns: subgrid;
       align-items: center;
       grid-template-rows: rem(130);
+      @media (width <= $r_desk){
+        grid-template-rows: inherit;
+      }
     }
   }
   &__text{
