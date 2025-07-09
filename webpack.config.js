@@ -15,12 +15,13 @@ const devServer = (isdev) => !isdev ? {} : {
 module.exports = ({develop})=>({
   mode: develop ? 'development' : 'production',
   entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    assetModuleFilename: 'images/[hash][ext][query]',
-    clean: true,
-  },
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js',
+        assetModuleFilename: 'images/[hash][ext][query]',
+        clean: true,
+        publicPath: '/Frontendblock-desktop-first/',
+    },
   plugins: [
     new HtmlWebpackPlugin({
         template: './src/index.html'
