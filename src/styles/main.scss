@@ -1,10 +1,8 @@
+@use 'functions' as *;
 @import 'normalize.css';
 @import 'font.scss';
 @import 'var.scss';
 
-@function rem($px) {
-  @return ($px / 16) + rem; // 16px = 1rem
-}
 
 body{
   font-family: $font;

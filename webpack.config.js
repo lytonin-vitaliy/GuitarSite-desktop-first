@@ -20,11 +20,11 @@ module.exports = ({develop})=>({
         filename: 'bundle.js',
         assetModuleFilename: 'images/[hash][ext][query]',
         clean: true,
-        publicPath: '/Frontendblock-desktop-first/',
+        publicPath: develop ? '/' : '/Frontendblock-desktop-first/',
     },
   plugins: [
     new HtmlWebpackPlugin({
-        template: './src/index.html'
+        template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
         filename: './styles/main.css'
