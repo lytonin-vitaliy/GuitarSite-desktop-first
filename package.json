@@ -27,14 +27,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lytonin-vitaliy/Frontendblock-module02-guitar.git"
+    "url": "git+https://lytonin-vitaliy.github.io/Frontendblock-desktop-first.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lytonin-vitaliy/Frontendblock-module02-guitar/issues"
+    "url": "https://lytonin-vitaliy.github.io/Frontendblock-desktop-first/issues"
   },
-  "homepage": "https://lytonin-vitaliy.github.io/Frontendblock-module02-guitar",
+  "homepage": "https://lytonin-vitaliy.github.io/Frontendblock-desktop-first/",
   "description": ""
 }
