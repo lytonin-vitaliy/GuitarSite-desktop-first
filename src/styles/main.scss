@@ -779,9 +779,37 @@ a{
   @container result (max-width: 935px){
     .result__list{
       grid-template-columns: repeat(2, 1fr);
+      padding-bottom: rem(140);
     }
     .result__item._subgrid{
-      grid-column: 2 / 3;
+      grid-column: inherit;
+      grid-template-columns: inherit;
+    }
+    .result__item{
+      @media (hover: hover){
+        &:hover {
+          transform: inherit;
+          box-shadow: inherit;
+        }
+      }
+    }
+    .result__btn{
+      width: 100%;
+      grid-column: inherit;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  @container result (max-width: 600px){
+    .result__btn{
+      font-size: clamp(rem(14), 3cqi, rem(20));
+    }
+  }
+  @container result (max-width: 450px){
+    .result__list{
+      grid-template-columns: 1fr;
+      padding-bottom: rem(110);
     }
   }
   &__list{
@@ -789,8 +817,9 @@ a{
     grid-template-columns: repeat(4, 1fr);
     gap: rem(30);
     margin-top: rem(50);
-    @media (width <= $r_desk){
-      gap: clamp(rem(20), 2.8vw, rem(30));
+    position: relative;
+    @media (width <= $r_tab){
+      gap: rem(20);
     }
   }
   &__item{
