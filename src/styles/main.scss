@@ -440,13 +440,11 @@ a{
     @media (width <= $r_desk_full_over){
       top: inherit;
       bottom: rem(156);
-      width: clamp(rem(252), 17vw, rem(332));
+      width: clamp(rem(252), 22vw, rem(332));
     }
     @media (width <= $r_desk_full){
-      /*width: auto;*/
       top: rem(-56);
       bottom: inherit;
-      width: clamp(rem(252), 17vw, rem(332));
     }
   }
 }
@@ -1083,6 +1081,7 @@ a{
     font-size: rem(16);
     font-weight: 700;
     line-height: 150%;
+    color: $accent;
     transition: $tr;
     box-shadow: 0 rem(4) 0 rem(-3) $accent;
     @media (hover: hover){
