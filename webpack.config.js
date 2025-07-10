@@ -20,7 +20,7 @@ module.exports = ({develop})=>({
         filename: 'bundle.js',
         assetModuleFilename: 'images/[hash][ext][query]',
         clean: true,
-        publicPath: develop ? '/' : '/Frontendblock-desktop-first/',
+        publicPath: '/Frontendblock-desktop-first/',
     },
   plugins: [
     new HtmlWebpackPlugin({
