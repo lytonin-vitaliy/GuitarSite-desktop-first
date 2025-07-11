@@ -32,6 +32,9 @@ a{
   @media (width <= $r_desk){
     font-size: clamp(rem(26), 2.343vw, rem(32));
   }
+  @media (width <= $r_mobile_660){
+    font-size: clamp(rem(18), 2.343vw, rem(26));
+  }
 }
 
 .header{
@@ -46,6 +49,9 @@ a{
   @media (width <= $r_tab){
     height: rem(66);
   }
+  @media (width <= $r_mobile_660){
+    height: rem(61);
+  }
 
   &::before{
     content: '';
@@ -59,6 +65,9 @@ a{
     background-color: $accent;
     @media (width <= $r_tab){
       top: rem(-2);
+    }
+    @media (width <= $r_mobile_660){
+      height: rem(62.6);
     }
   }
   &__logo{
@@ -83,6 +92,9 @@ a{
         height: rem(66);
         background-size: contain;
         background-repeat: no-repeat;
+      }
+      @media (width <= $r_mobile_660){
+        display: none;
       }
     }
 
@@ -125,6 +137,9 @@ a{
             background-repeat: no-repeat;
             left: rem(-62);
           }
+          @media (width <= $r_mobile_660){
+            display: none;
+          }
     }
       &::before{
       content: '';
@@ -151,7 +166,7 @@ a{
       }
     }
     @media (width <= $r_tab){
-      font-size: rem(16);
+      font-size: clamp(rem(10), 1.470vw + 0.3rem, rem(16));
     }
   }
 
@@ -163,6 +178,9 @@ a{
       height: rem(30.63);
       @media (width <= $r_desk){
         width: clamp(rem(300), 39vw, rem(400));
+      }
+      @media (width <= $r_mobile_660){
+        width: clamp(rem(150), 39vw, rem(300));
       }
     }
   }
@@ -187,6 +205,10 @@ a{
     padding-left: rem(20);
     padding-right: rem(20);
   }
+  @media (width <= $r_mobile_360){
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .banner{
@@ -206,7 +228,12 @@ a{
     padding: clamp(rem(30), calc(rem(-40) + 1.17vw), rem(50)) clamp(rem(30), calc(rem(0) + 0.39vw), rem(40));
 
   }
-
+  @media (width <= $r_desk){
+    padding: rem(20) rem(15);
+  }
+  @media (width <= $r_mobile_660){
+    margin-bottom: rem(50);
+  }
 
   &__main{
     flex-basis: 61%;
@@ -235,6 +262,9 @@ a{
     }
     @media (width <= $r_desk){
       font-size: clamp(rem(40), 3.906vw + 0.625rem, rem(50));
+    }
+    @media (width <= $r_mobile_660){
+      font-size: clamp(rem(25), 3.906vw + 0.625rem, rem(40))
     }
   }
 
@@ -423,6 +453,9 @@ a{
   @media (width <= $r_desk_full_over){
     padding-right: clamp(rem(200), 17vw, rem(332));
   }
+  @media (width <= $r_mobile_660){
+    padding: rem(65) rem(15) 0;
+  }
   &__title{
     font-size: rem(24);
     font-weight: 400;
@@ -430,6 +463,9 @@ a{
     text-transform: uppercase;
     margin-top: 0;
     letter-spacing: rem(1.2);
+    @media (width <= $r_mobile_660){
+      font-size: clamp(rem(18), 3.687vw, rem(24));
+    }
   }
   &__text{
   line-height: 150%;
@@ -437,6 +473,9 @@ a{
   font-size: rem(20);
   margin-top: 0;
   margin-bottom: rem(30);
+    @media (width <= $r_mobile_660){
+      font-size: clamp(rem(14), 3.687vw, rem(20));
+    }
   }
   &__img{
   position: absolute;
@@ -453,6 +492,9 @@ a{
       top: rem(-56);
       bottom: inherit;
     }
+    @media (width <= $r_mobile_660){
+      opacity: 0;
+    }
   }
 }
 }
@@ -463,6 +505,9 @@ a{
   max-width: rem(1830);
   overflow-x: hidden;
   margin: clamp(rem(80), 9.77vw, rem(150)) 0;
+  @media (width <= $r_mobile_660){
+    display: none;
+  }
 }
 
 .tag{
@@ -534,6 +579,9 @@ a{
   display: flex;
   align-items: center;
   gap: rem(20);
+  @media (width <= $r_mobile_660){
+    gap: rem(10);
+  }
   &__prev, &__next{
     width: rem(70);
     height: rem(70);
@@ -547,6 +595,10 @@ a{
     right: inherit;
     left: inherit;
     margin-top: rem(20);
+    @media (width <= $r_mobile_660){
+      width: rem(40);
+      height: rem(40);
+    }
     &::after{
       content: '';
       display: flex;
@@ -556,6 +608,10 @@ a{
       height: rem(24);
       background-repeat: no-repeat;
       background-size: contain;
+      @media (width <= $r_mobile_660){
+        width: rem(27);
+        height: 1rem;
+      }
     }
     @media (hover: hover){
     &:hover{
@@ -621,6 +677,9 @@ a{
     bottom: 0;
     @media (width <= $r_desk_full){
       height: min(rem(615), 43vw);
+    }
+    @media (width <= $r_mobile_660){
+      height: min(rem(237), 43vw);
     }
   }
   &__name{
