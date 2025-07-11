@@ -17,7 +17,7 @@ const teacherSwiper = new Swiper('.slider-teacher', {
     modules: [Navigation, Pagination],
 
     breakpoints: {
-        660: {
+        550: {
             slidesPerView: 3,
             spaceBetween: 15,
         },
