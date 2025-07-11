@@ -436,7 +436,7 @@ a{
       height: rem(50);
       border-radius: rem(10);
       transition: $tr;
-      @media (width <= $r_desk - 24px){
+      @media (width <= $r_adapt){
         top: calc(rem(-75) - 1vw);
         left: rem(32);
       }
