@@ -867,28 +867,28 @@ button.swiper-pagination-bullet {
 @charset "UTF-8";
 @font-face {
   font-family: "Unbounded";
-  src: url(/Frontendblock-desktop-first/images/851513e0b8c6b8da9d18.ttf) format("truetype");
+  src: url(/GuitarSite-desktop-first/images/851513e0b8c6b8da9d18.ttf) format("truetype");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url(/Frontendblock-desktop-first/images/2a87c7225278b8b817aa.ttf) format("truetype");
+  src: url(/GuitarSite-desktop-first/images/2a87c7225278b8b817aa.ttf) format("truetype");
   font-weight: 300;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url(/Frontendblock-desktop-first/images/62bfedce93fb82abab43.ttf) format("truetype");
+  src: url(/GuitarSite-desktop-first/images/62bfedce93fb82abab43.ttf) format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url(/Frontendblock-desktop-first/images/7ed2a26d99b8bd59bd73.ttf) format("truetype");
+  src: url(/GuitarSite-desktop-first/images/7ed2a26d99b8bd59bd73.ttf) format("truetype");
   font-weight: 600;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url(/Frontendblock-desktop-first/images/46863baa59b817cdb1cf.ttf) format("truetype");
+  src: url(/GuitarSite-desktop-first/images/46863baa59b817cdb1cf.ttf) format("truetype");
   font-weight: 700;
 }
 body {
@@ -988,7 +988,7 @@ a {
   display: block;
   width: 4.25rem;
   height: 4.4375rem;
-  background-image: url(/Frontendblock-desktop-first/images/3f5316b7351f6a638667.svg);
+  background-image: url(/GuitarSite-desktop-first/images/3f5316b7351f6a638667.svg);
   position: absolute;
   right: -4.25rem;
   top: 0;
@@ -1010,7 +1010,7 @@ a {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  background-image: url(/Frontendblock-desktop-first/images/c41b0706dd259b0b3f86.svg);
+  background-image: url(/GuitarSite-desktop-first/images/c41b0706dd259b0b3f86.svg);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -1038,7 +1038,7 @@ a {
   display: block;
   width: 4.25rem;
   height: 4.4375rem;
-  background-image: url(/Frontendblock-desktop-first/images/cf97ace0e1fb2ddad937.svg);
+  background-image: url(/GuitarSite-desktop-first/images/cf97ace0e1fb2ddad937.svg);
   position: absolute;
   top: 0;
   left: -4.25rem;
@@ -1061,7 +1061,7 @@ a {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  background-image: url(/Frontendblock-desktop-first/images/9470e21b74580f19b0ab.svg);
+  background-image: url(/GuitarSite-desktop-first/images/9470e21b74580f19b0ab.svg);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -1130,7 +1130,7 @@ a {
 
 .banner {
   display: flex;
-  background-image: url(/Frontendblock-desktop-first/images/76969c8a6e4856d1c9cf.jpg);
+  background-image: url(/GuitarSite-desktop-first/images/76969c8a6e4856d1c9cf.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 3.125rem;
@@ -1329,7 +1329,7 @@ a {
   align-items: center;
   justify-content: center;
   content: "";
-  background-image: url(/Frontendblock-desktop-first/images/697eb0bfc528e1e76928.svg);
+  background-image: url(/GuitarSite-desktop-first/images/697eb0bfc528e1e76928.svg);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -1348,7 +1348,7 @@ a {
   content: "";
   transform: scale(0);
   transform-origin: top left;
-  background-image: url(/Frontendblock-desktop-first/images/4bfb25dc5a178ca09475.svg);
+  background-image: url(/GuitarSite-desktop-first/images/4bfb25dc5a178ca09475.svg);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -1597,11 +1597,11 @@ a {
   }
 }
 .course-control__prev::after {
-  background-image: url(/Frontendblock-desktop-first/images/5c59740fae3f1aee859e.svg);
+  background-image: url(/GuitarSite-desktop-first/images/5c59740fae3f1aee859e.svg);
   position: inherit;
 }
 .course-control__next::after {
-  background-image: url(/Frontendblock-desktop-first/images/f8ac34b10754633e6422.svg);
+  background-image: url(/GuitarSite-desktop-first/images/f8ac34b10754633e6422.svg);
   position: inherit;
 }
 
@@ -1758,10 +1758,10 @@ a {
   display: block;
   width: 3.125rem;
   height: 3.125rem;
-  background-image: url(/Frontendblock-desktop-first/images/5977ef414b83b487e60c.svg);
+  background-image: url(/GuitarSite-desktop-first/images/5977ef414b83b487e60c.svg);
 }
 .accordion__btn.active::after {
-  background-image: url(/Frontendblock-desktop-first/images/36bf04c5357c504e9ea8.svg);
+  background-image: url(/GuitarSite-desktop-first/images/36bf04c5357c504e9ea8.svg);
 }
 .accordion__panel {
   max-height: 0;
@@ -2009,7 +2009,7 @@ a {
 .areas__link::after {
   content: "";
   display: block;
-  background-image: url(/Frontendblock-desktop-first/images/e056b0caec95d1298b81.svg);
+  background-image: url(/GuitarSite-desktop-first/images/e056b0caec95d1298b81.svg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 2.5rem;
@@ -2043,7 +2043,7 @@ a {
 .areas__link._acoustic::before {
   width: clamp(12.5rem, 30vw, 32.125rem);
   height: clamp(12.5rem, 30vw, 17.125rem);
-  background: url(/Frontendblock-desktop-first/images/fa4b4f60059f56b8053b.png);
+  background: url(/GuitarSite-desktop-first/images/fa4b4f60059f56b8053b.png);
   top: calc(50% - 9.8125rem);
   left: 61vw;
   background-repeat: no-repeat;
@@ -2053,7 +2053,7 @@ a {
 .areas__link._drums::before {
   width: clamp(12.5rem, 30vw, 22.875rem);
   height: clamp(12.5rem, 30vw, 26.3125rem);
-  background-image: url(/Frontendblock-desktop-first/images/b42c6aa475f072af944f.png);
+  background-image: url(/GuitarSite-desktop-first/images/b42c6aa475f072af944f.png);
   top: calc(50% - 10.8125rem);
   left: 55vw;
   background-repeat: no-repeat;
@@ -2063,7 +2063,7 @@ a {
 .areas__link._violin::before {
   width: clamp(12.5rem, 30vw, 33.4375rem);
   height: clamp(12.5rem, 30vw, 24.9375rem);
-  background-image: url(/Frontendblock-desktop-first/images/48db787b076fc478a5e8.png);
+  background-image: url(/GuitarSite-desktop-first/images/48db787b076fc478a5e8.png);
   top: calc(50% - 13.5rem);
   left: 55vw;
   background-repeat: no-repeat;
@@ -2073,7 +2073,7 @@ a {
 .areas__link._bas::before {
   width: clamp(12.5rem, 30vw, 33rem);
   height: clamp(12.5rem, 30vw, 23.6875rem);
-  background-image: url(/Frontendblock-desktop-first/images/59727da777ada1e1246d.png);
+  background-image: url(/GuitarSite-desktop-first/images/59727da777ada1e1246d.png);
   top: calc(50% - 12.3125rem);
   left: 60vw;
   background-repeat: no-repeat;
@@ -2147,8 +2147,8 @@ a {
 .social__link._wa::after {
   width: 1.75rem;
   height: 1.75rem;
-  mask-image: url(/Frontendblock-desktop-first/images/2527207c03eea341fe5c.svg);
-  -webkit-mask-image: url(/Frontendblock-desktop-first/images/2527207c03eea341fe5c.svg);
+  mask-image: url(/GuitarSite-desktop-first/images/2527207c03eea341fe5c.svg);
+  -webkit-mask-image: url(/GuitarSite-desktop-first/images/2527207c03eea341fe5c.svg);
 }
 .social__link._vk {
   padding: 0.87875rem 0.390625rem 0.68375rem 0.390625rem;
@@ -2156,8 +2156,8 @@ a {
 .social__link._vk::after {
   width: 1.953125rem;
   height: 1.171875rem;
-  mask-image: url(/Frontendblock-desktop-first/images/07de501e1bb3f15d7a95.svg);
-  -webkit-mask-image: url(/Frontendblock-desktop-first/images/07de501e1bb3f15d7a95.svg);
+  mask-image: url(/GuitarSite-desktop-first/images/07de501e1bb3f15d7a95.svg);
+  -webkit-mask-image: url(/GuitarSite-desktop-first/images/07de501e1bb3f15d7a95.svg);
 }
 .social__link._tg {
   padding: 0.68375rem 0.488125rem;
@@ -2165,8 +2165,8 @@ a {
 .social__link._tg::after {
   width: 1.5625rem;
   height: 1.3675rem;
-  mask-image: url(/Frontendblock-desktop-first/images/0c255c19d51247fd8104.svg);
-  -webkit-mask-image: url(/Frontendblock-desktop-first/images/0c255c19d51247fd8104.svg);
+  mask-image: url(/GuitarSite-desktop-first/images/0c255c19d51247fd8104.svg);
+  -webkit-mask-image: url(/GuitarSite-desktop-first/images/0c255c19d51247fd8104.svg);
 }
 @media (width <= 767px) {
   .social {
