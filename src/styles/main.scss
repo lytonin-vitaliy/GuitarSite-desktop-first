@@ -248,6 +248,7 @@ a{
     @media (width <= $r_mobile){
       flex-direction: column;
       grid-template-columns: 1fr;
+      gap: rem(12);
     }
   }
   &__title{
@@ -386,19 +387,20 @@ a{
 
     }
   &__decor{
-    display: flex;
     content: '';
     position: relative;
     transition: $tr;
     &::before{
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       content: '';
       background-image: url(../images/banner-info-decor.svg);
       background-repeat: no-repeat;
       background-size: contain;
       position: absolute;
-      top: rem(-150);
-      right: rem(-79);
+      top: rem(-2);
+      right: rem(-2);
       width: rem(80);
       height: rem(151);
       @media (width <= $r_desk - 24px){
@@ -415,8 +417,8 @@ a{
       background-repeat: no-repeat;
       background-size: contain;
       position: absolute;
-      top: rem(-150);
-      right: rem(-79);
+      top: rem(-2);
+      right: rem(-2);
       width: rem(80);
       height: rem(151);
       opacity: 0;
@@ -426,21 +428,23 @@ a{
       }
     }
     &._calendar, &._offline, &._age, &._payment{
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background-size: contain;
       background-repeat: no-repeat;
       position: absolute;
-      top: rem(-151);
-      right: rem(-80);
+      top: 0;
+      right: rem(-77);
       border: rem(1) solid $light;
       width: rem(50);
       height: rem(50);
       border-radius: rem(10);
       transition: $tr;
       @media (width <= $r_adapt){
-        top: calc(rem(-75) - 1vw);
+        top: calc(rem(51) - 1vw);
         left: rem(32);
       }
-
     }
     }
   }

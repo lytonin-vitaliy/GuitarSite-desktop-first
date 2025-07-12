@@ -1,3 +1,4 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -20,7 +21,7 @@ module.exports = ({develop})=>({
         filename: 'bundle.js',
         assetModuleFilename: 'images/[hash][ext][query]',
         clean: true,
-        publicPath: '/Frontendblock-desktop-first/'
+        publicPath: '/Frontendblock-desktop-first/',
     },
   plugins: [
     new HtmlWebpackPlugin({
@@ -28,7 +29,12 @@ module.exports = ({develop})=>({
     }),
     new MiniCssExtractPlugin({
         filename: './styles/main.css'
-    })
+    }),
+      new CopyWebpackPlugin({
+          patterns: [
+              { from: 'src/images', to: 'images' }
+          ]
+      })
   ],
   module: {
     rules:[
@@ -36,6 +42,7 @@ module.exports = ({develop})=>({
         test: /\.(png|svg|jpg|jpeg)$/i,
         type: 'asset/resource'
       },
+
       {
         test: /\.html$/i,
         loader: "html-loader",
