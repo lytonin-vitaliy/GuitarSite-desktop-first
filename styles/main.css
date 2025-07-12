@@ -1176,6 +1176,7 @@ a {
   .banner__info {
     flex-direction: column;
     grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 }
 .banner__title {
@@ -1319,20 +1320,21 @@ a {
   }
 }
 .banner__decor {
-  display: flex;
   content: "";
   position: relative;
   transition: 0.3s;
 }
 .banner__decor::before {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   content: "";
   background-image: url(/Frontendblock-desktop-first/images/697eb0bfc528e1e76928.svg);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: -9.375rem;
-  right: -4.9375rem;
+  top: -0.125rem;
+  right: -0.125rem;
   width: 5rem;
   height: 9.4375rem;
 }
@@ -1350,8 +1352,8 @@ a {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: -9.375rem;
-  right: -4.9375rem;
+  top: -0.125rem;
+  right: -0.125rem;
   width: 5rem;
   height: 9.4375rem;
   opacity: 0;
@@ -1363,11 +1365,14 @@ a {
   }
 }
 .banner__decor._calendar, .banner__decor._offline, .banner__decor._age, .banner__decor._payment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: -9.4375rem;
-  right: -5rem;
+  top: 0;
+  right: -4.8125rem;
   border: 0.0625rem solid #fff;
   width: 3.125rem;
   height: 3.125rem;
@@ -1376,7 +1381,7 @@ a {
 }
 @media (width <= 1000px) {
   .banner__decor._calendar, .banner__decor._offline, .banner__decor._age, .banner__decor._payment {
-    top: calc(-4.6875rem - 1vw);
+    top: calc(3.1875rem - 1vw);
     left: 2rem;
   }
 }
