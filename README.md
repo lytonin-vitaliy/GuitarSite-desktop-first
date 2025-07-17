@@ -1,5 +1,45 @@
 # Guitar Promo Site
 
+A training project — a promo website for a music school with a focus on guitars.  
+Developed as part of an advanced HTML/CSS layout course.
+
+---
+
+## 🚀 Tech Stack
+
+- HTML5
+- SCSS (BEM, nesting, mixins, variables, media queries)
+- JavaScript - Swiper
+- Webpack
+- Git + GitHub Pages
+
+---
+
+## 🧠 Key Features
+
+- Fully responsive layout for 1920 / 1024 / 768 / 360px viewports
+- SCSS variables, mixins, and utility functions
+- BEM methodology for clean and scalable styles
+- Interactive UI elements: sliders, hover effects
+- Font, image, and SVG integration
+- Configured Webpack (build, plugins, deployment)
+- Deployed via GitHub Pages
+
+---
+
+## 🛠 How to Run Locally
+
+```bash
+git clone https://github.com/lytonin-vitaliy/Frontendblock-module02-guitar.git
+cd Frontendblock-module02-guitar
+npm install
+npm run start
+
+
+
+
+# Guitar Promo Site
+
 Учебный проект — промо-сайт музыкальной школы с акцентом на гитары.  
 Разработан в рамках продвинутого курса по вёрстке.
 
